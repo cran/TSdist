@@ -1,0 +1,25 @@
+#Import proxy
+importFrom(proxy,dist)
+importFrom(proxy,pr_DB)
+
+#Import zoo
+import(zoo)
+
+#Import xts
+import(xts)
+
+#dtw, edr, erp, lcss core functions
+useDynLib(TSdist)
+
+
+#Export distance functions
+
+export(crossCorrelationDistance,dissimDistance,dissimapproxDistance,dtwDistance, edrDistance, erpDistance, lcssDistance, fourierDistance,lbKeoghDistance,lpDistance,euclideanDistance,manhattanDistance,minkowskiDistance,infiniteNormDistance,correlationDistance,stsDistance, tquestDistance)
+
+
+#Export wrapper function for time series objects.
+export(tsDistances)
+
+#Export function to calculate distance matrices
+export(tsDatabaseDistances)
+

@@ -1,0 +1,17 @@
+Package: TSdist
+Type: Package
+Title: Distance Measures for Time Series data.
+Version: 1.0
+Encoding: UTF-8
+Date: 2014-05-14
+Depends: R (>= 3.0.3), stats, proxy
+Imports: zoo, xts
+Author: Usue Mori, Alexander Mendiburu, J.A. Lozano 
+Maintainer: Usue Mori <usue.mori@ehu.es>
+Description: This package provides a set of commonly used distance measures for time series data. The application of these distance measures is useful to perform clustering, classification or other data mining tasks.
+License: GPL (>= 2)
+URL: http://TSdist.r-forge.r-project.org/
+Packaged: 2014-05-13 14:40:11 UTC; usue
+NeedsCompilation: yes
+Repository: CRAN
+Date/Publication: 2014-05-13 17:45:11
