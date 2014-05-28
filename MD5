@@ -1,4 +1,4 @@
-93e9911685bc56d0d994cdea8eec86d9 *DESCRIPTION
+ebe5ed069b698533fb507948b4abc381 *DESCRIPTION
 83537d0135aa5977ed78467ce00b65ce *NAMESPACE
 325bfbdf7030509c7dac0a819104109f *R/cross_correlation_distance.R
 e987cd2fff95f574ceacbcbc3b80a025 *R/database_distances.R
@@ -16,7 +16,7 @@ eb3a1f04f1d6eca2c2b1f78f6a8876fd *R/erp_distance.R
 bc0c7add98b41c600ea86d8cee101464 *R/tquest_distance.R
 f0b0fce24735ce088a0f24383443ef84 *R/ts_distances.R
 7db9a62b9ed85f5f705e0fb5989f1a3e *R/zzz.R
-3d4760210c3fa35b30b8992125ce4c30 *build/vignette.rds
+a2a30e209dbddeec02149d991c9a0979 *build/vignette.rds
 293706b93588b1c961aebeb6d32294fe *data/example.database.RData
 1c435e81d73375587f69a28b10a5e36c *data/example.series1.RData
 1486f04848ae32d7986b82d8411fbfe7 *data/example.series2.RData
@@ -25,9 +25,9 @@ a851e5e4b9fba7a2437b2cb555e54f43 *data/example.series3.RData
 44943c40045f251763f472060bc898ed *data/zoo.database.RData
 7b6ffb1c1dc547cfe13bffb8af7b302b *data/zoo.series1.RData
 e2ef8af912bebdbe50ec07fe3cb38439 *data/zoo.series2.RData
-375dc626dd86835937800ddd6b79cbef *inst/doc/jssarticle.R
-ae6c719ffc90bf07c387008a869f5a97 *inst/doc/jssarticle.Rnw
-3bc048fba4b162e47498c159e4f640d3 *inst/doc/jssarticle.pdf
+b7d1771b75b93120de2c81d2d70d6e1a *inst/doc/TSdist.R
+ae6c719ffc90bf07c387008a869f5a97 *inst/doc/TSdist.Rnw
+491f8576a19d1a26d76eae26d7a9abe6 *inst/doc/TSdist.pdf
 58f77ab7a6902ef50778c568a9dc764a *man/TSdist-package.Rd
 3ff89f6d49d60147402b415074d79129 *man/correlationDistance.Rd
 293f81ba8153f11d743fbc4cb736325c *man/crossCorrelationDistance.Rd
@@ -62,10 +62,10 @@ f565b9d3fd90e277cebe2d0f76ac6ab9 *src/LCSSnw.c
 905165ab6de596e344ca322371e32ddf *vignettes/DTW.pdf
 24be9d82e79eb33ad372f352cad81390 *vignettes/DTW2.pdf
 ef4a946b2da25dd48ce75cf78d419bb2 *vignettes/TQuest.pdf
+ae6c719ffc90bf07c387008a869f5a97 *vignettes/TSdist.Rnw
 7b641cc41d63d5c3470d06433a56c5af *vignettes/dissim.pdf
 2bd1afee19612d89122969a432d27a39 *vignettes/exampleseries1.pdf
 0e242c126c9b07c0b773c9c7046de52e *vignettes/exampleseries2.pdf
 bd079ca2a0fbed360639e09b357c38b1 *vignettes/exampleseries3.pdf
 e38dbb8685acc7f1c7c498c2a326c462 *vignettes/exampleseries4.pdf
-ae6c719ffc90bf07c387008a869f5a97 *vignettes/jssarticle.Rnw
 295488d90d0b0f5eec7968e02285ecf7 *vignettes/library.bib
