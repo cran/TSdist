@@ -2,7 +2,9 @@
 
 dissimapproxDistance <- function(x, y, tx, ty){
   
-  dissimInitialCheck(x, y, tx, ty)
+  if (class(try(dissimInitialCheck(x, y, tx, ty)))=="try-error"){
+    return(NA)
+  }else{
    
   #If both temporal indices are missing, equal sampling is assumed and both
   #series begin and end in the same timestamp.
@@ -63,6 +65,7 @@ dissimapproxDistance <- function(x, y, tx, ty){
   #The total DISSIM distance is calculated.
   d <- 1/2 * sum( (D1+D2) * diff(ind) )
   return(d)
+  }
 }
 
 

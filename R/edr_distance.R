@@ -3,7 +3,9 @@
 #This function calculates the Edit Distance Based on Real Penalty.
 edrDistance<-function(x, y, epsilon, sigma){
   
-  edrInitialCheck(x, y, epsilon, sigma)
+  if (class(try(edrInitialCheck(x, y, epsilon, sigma)))=="try-error"){
+    return(NA)
+  }else{
 
   #The length of the series are defined
   tamx <- length(x)
@@ -39,6 +41,7 @@ edrDistance<-function(x, y, epsilon, sigma){
   #the series.
   d<-costMatrix[length(costMatrix)]
   return(d)
+  }
 }
 
 
@@ -47,6 +50,9 @@ edrInitialCheck <- function(x, y, epsilon, sigma){
   
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) < 1 | length(y) < 1){
     stop('The series must have at least one point', call.=FALSE)
@@ -71,7 +77,7 @@ edrInitialCheck <- function(x, y, epsilon, sigma){
       stop('The window size exceeds the the length of the second series', call.=FALSE)
     }
     if(sigma < abs(length(x) - length(y))){
-      stop('It is not possible to compare those two series with the defined window size', call.=FALSE)
+      stop('The window size can not be lower than the difference between the series lengths', call.=FALSE)
     }
   }
 }

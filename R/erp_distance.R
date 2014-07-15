@@ -1,8 +1,10 @@
 
 erpDistance<-function(x, y, g, sigma){
   
-  erpInitialCheck(x, y, g, sigma)
-  
+  if (class(try(erpInitialCheck(x, y, g, sigma)))=="try-error"){
+    return(NA)
+  }else{
+
   #The length of the series are defined
   tamx <- length(x)
   tamy <- length(y)
@@ -36,6 +38,7 @@ erpDistance<-function(x, y, g, sigma){
   #the series.
   d<-costMatrix[length(costMatrix)]
   return(d)
+  }
 }
 
 
@@ -44,6 +47,9 @@ erpInitialCheck <- function(x, y, g, sigma){
   
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (!is.numeric(g)){
     stop('g must be numeric', call.=FALSE)
@@ -65,7 +71,7 @@ erpInitialCheck <- function(x, y, g, sigma){
       stop('The window size exceeds the the length of the second series', call.=FALSE)
     }
     if(sigma < abs(length(x) - length(y))){
-      stop('It is not possible to compare those two series with the defined window size', call.=FALSE)
+      stop('The window size can not be lower than the difference between the series lengths', call.=FALSE)
     }
   }
 }

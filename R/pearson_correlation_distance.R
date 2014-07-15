@@ -2,16 +2,24 @@
 #This function calculates a distance based on Pearson's correlation
 correlationDistance <- function(x, y, beta){
   
-  cInitialCheck(x, y, beta)
+  if (class(try(cInitialCheck(x, y, beta)))=="try-error"){
+    return(NA)
+  }else{
 
+  #The correlation is calculated if no error is issued.
+  err<-try(c<-cor(x, y))
+  
+  if(class(err)=="try-err"){return(NA)}
+  
   if (missing(beta)){
   #The distance is directly calculated.
-    d <- 2 * (1 - cor(x, y))
+    d <- 2 * (1 - c)
   } else {
-    d <- ((1 - cor(x, y)) / (1 + cor(x, y))) ^ beta
+    d <- ((1 - c) / (1 + c)) ^ beta
   }
   
-  d  
+  return(d)  
+  }
 }
 
 
@@ -20,6 +28,9 @@ cInitialCheck <- function(x, y, beta){
   
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) <= 1 | length(y) <= 1){
     stop('The series must have a more than one point', call.=FALSE)

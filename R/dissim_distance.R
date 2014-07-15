@@ -1,7 +1,9 @@
 
 dissimDistance <- function(x, y, tx, ty){
   
-  dissimInitialCheck(x, y, tx, ty)
+  if (class(try(dissimInitialCheck(x, y, tx, ty)))=="try-error"){
+    return(NA)
+  }else{
 
   #If both temporal indices are missing, equal sampling is assumed and both
   #series begin and end in the same timestamp.
@@ -89,6 +91,7 @@ dissimDistance <- function(x, y, tx, ty){
   d<-sum(D)
 
   return(d)
+  }
 }
 
 
@@ -97,10 +100,12 @@ dissimInitialCheck <- function(x, y, tx, ty){
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
   }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
+  }
   if (length(x) <= 1 | length(y) <= 1){
     stop('The series must have a more than one point', call.=FALSE)
   }
-  
   if (any(is.na(x)) | any(is.na(y))){
     stop('There are missing values in the series', call.=FALSE)
   } 

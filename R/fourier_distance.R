@@ -3,12 +3,17 @@
 #This function calculates a distance based on the Fourier Coefficients
 fourierDistance <- function(x, y, n = (floor(length(x) / 2) + 1)){
 
-  fInitialCheck(x, y, n)
-
+  err<-try(fInitialCheck(x, y, n))
+  if(class(err)=="try-error"){return(NA)}
+    
   #The discrete fourier transform is calculated for both series.
-  fft1 <- fft(x)
-  fft2 <- fft(y)
-
+  #If errors arise, NA is returned.
+  err<-try(fft1 <- fft(x))
+  if(class(err)=="try-error"){return(NA)}
+  
+  err<-try(fft2 <- fft(y))
+  if(class(err)=="try-error"){return(NA)}
+    
   #The distance is calculated by using the first n coefficients and applying the 
   #Euclidean distance between them.
   d <- sqrt(sum(Mod(fft1[1:n] - fft2[1:n])^2))
@@ -17,10 +22,14 @@ fourierDistance <- function(x, y, n = (floor(length(x) / 2) + 1)){
 }
 
 
+
 # This function checks for possible initial errors: 
 fInitialCheck <- function(x, y, n){
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) <= 1 | length(y) <= 1){
     stop('The series must have a more than one point', call.=FALSE)

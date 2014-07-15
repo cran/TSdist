@@ -1,4 +1,3 @@
-
 tsDistances <- function(x, y, tx, ty, distance, ...){
 
 #If x is given as a ts object, the values and the time index are extracted.
@@ -27,14 +26,14 @@ if(is.zoo(y) | is.xts(y)){
 
 #If x is given as a numerical vector but the time index is not provided
 #a constant sampling rate is assumed.
-if(is.matrix(x) & missing(tx)){
-  tx <- c(1:dim(x)[1])
+if(is.numeric(x) & missing(tx)){
+  tx <- c(1:length(x))
 } 
 
 #If y is given as a numerical vector but the time index is not provided
 #a constant sampling rate is assumed.
-if(is.matrix(y) & missing(ty)){
-  ty <- c(1:dim(y)[1])
+if(is.numeric(x) & missing(ty)){
+  ty <- c(1:length(y))
 }
 
 #The distance is calculated.

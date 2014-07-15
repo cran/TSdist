@@ -1,7 +1,9 @@
 
 lcssDistance<-function(x, y, epsilon, sigma){
   
-  lcssInitialCheck(x, y, epsilon, sigma)
+  if (class(try(lcssInitialCheck(x, y, epsilon, sigma)))=="try-error"){
+    return(NA)
+  }else{
   
   #The length of the series are defined
   tamx<-length(x)
@@ -35,7 +37,9 @@ lcssDistance<-function(x, y, epsilon, sigma){
 
   #The last position of the cost matrix is returned as the distance between 
   #the series.
-  costMatrix[length(costMatrix)]
+  d<-costMatrix[length(costMatrix)]
+  return(d)
+  }
 }
 
 
@@ -45,6 +49,9 @@ lcssInitialCheck <- function(x, y, epsilon, sigma){
   
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) < 1 | length(y) < 1){
     stop('The series must have at least one point', call.=FALSE)
@@ -69,7 +76,7 @@ lcssInitialCheck <- function(x, y, epsilon, sigma){
       stop('The window size exceeds the the length of the second series', call.=FALSE)
     }
     if(sigma < abs(length(x) - length(y))){
-      stop('It is not possible to compare those two series with the defined window size', call.=FALSE)
+      stop('The window size can not be lower than the difference between the series lengths', call.=FALSE)
     }
   }
 }

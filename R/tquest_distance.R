@@ -17,6 +17,10 @@ tquestDistance<-function(x, y, tx, ty, tau){
     ty <- seq(tx[1], tx[length(tx)], length.out=length(y))
   }
   
+  if (class(try(tquestInitialCheck(x, y, tx, ty, tau)))=="try-error"){
+    return(NA)
+  }else{
+   
   #The threshold passing time intervals are identified.
   xbig <- which(x > tau)
   xbig<-tx[xbig]
@@ -94,6 +98,7 @@ tquestDistance<-function(x, y, tx, ty, tau){
   #The final distance value is calculated.
   d <- 1 / dim(xinterval)[2] * d1 + 1 / dim(yinterval)[2] * d2
   return(d)
+  }
 }
 
 
@@ -102,6 +107,9 @@ tquestInitialCheck <- function(x, y, tx, ty, tau){
   
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) <= 1 | length(y) <= 1){
     stop('The series must have a more than one point', call.=FALSE)

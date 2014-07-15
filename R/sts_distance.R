@@ -2,8 +2,10 @@
 #This function calculates the short time series (sts) distance measure.
 stsDistance <- function(x, y, tx, ty){
   
-  stsInitialCheck(x, y, tx, ty)
-  
+  if (class(try(stsInitialCheck(x, y, tx, ty)))=="try-error"){
+    return(NA)
+  }else{
+
   #If no index is specified then evenly samples series are assumed.
   if (missing(tx) & missing(ty)){
    tx<-c(1:length(x))
@@ -18,7 +20,8 @@ stsDistance <- function(x, y, tx, ty){
 
   #The STS distance is calculated.
   d <- sqrt(sum((diff(x) / diff(tx) - diff(y) / diff(ty)) ^ 2))
-  d
+  return(d)
+  }
 
 }
 
@@ -28,6 +31,9 @@ stsInitialCheck <- function(x, y, tx, ty){
   
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) <= 1 | length(y) <= 1){
     stop('The series must have a more than one point', call.=FALSE)

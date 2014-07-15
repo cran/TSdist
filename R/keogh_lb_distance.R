@@ -1,6 +1,8 @@
 lbKeoghDistance<-function(x, y, window.size){
   
-  lbKeoghInitialCheck(x, y, window.size)
+  if (class(try(lbKeoghInitialCheck(x, y, window.size)))=="try-error"){
+    return(NA)
+  }else{
   
   #The upper envelope of x is built.
   upper.env <- rollapply(x, window.size, max, partial=TRUE)
@@ -14,6 +16,7 @@ lbKeoghDistance<-function(x, y, window.size){
   D[ind2] <- (y[ind2] - upper.env[ind2]) ^ 2
   d <- sqrt(sum(D))
   return(d)
+  }
 }
 
 
@@ -22,7 +25,10 @@ lbKeoghDistance<-function(x, y, window.size){
 lbKeoghInitialCheck <- function(x, y, window.size){
   
   if (!is.numeric(x) | !is.numeric(y)){
-    stop('The series must be numeric vectors', call.=FALSE)
+    stop('The series must be numeric', call.=FALSE)
+  }
+  if (!is.vector(x) | !is.vector(y)){
+    stop('The series must be univariate vectors', call.=FALSE)
   }
   if (length(x) < 1 | length(y) < 1){
     stop('The series must have at least one point', call.=FALSE)
