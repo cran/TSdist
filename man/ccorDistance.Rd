@@ -1,5 +1,5 @@
-\name{crossCorrelationDistance}
-\alias{crossCorrelationDistance}
+\name{ccorDistance}
+\alias{ccorDistance}
 
 \title{
 Cross-correlation based distance.
@@ -11,7 +11,7 @@ numeric time series.
 }
 
 \usage{
-crossCorrelationDistance(x, y, lag.max=(min(length(x), length(y))-1))
+ccorDistance(x, y, lag.max=(min(length(x), length(y))-1))
 }
 
 \arguments{
@@ -79,11 +79,11 @@ help(example.series)
 #Calculate the cross-correlation based distance 
 #using the default lag.max.
 
-crossCorrelationDistance(example.series3, example.series4)
+ccorDistance(example.series3, example.series4)
 
 #Calculate the cross-correlaion based distance 
 #with lag.max=50.
 
-crossCorrelationDistance(example.series3, example.series4, lag.max=50)
+ccorDistance(example.series3, example.series4, lag.max=50)
 
 }

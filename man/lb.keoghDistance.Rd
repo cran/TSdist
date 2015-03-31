@@ -1,5 +1,5 @@
-\name{lbKeoghDistance}
-\alias{lbKeoghDistance}
+\name{lb.keoghDistance}
+\alias{lb.keoghDistance}
 
 \title{
 LB_Keogh for DTW.
@@ -9,7 +9,7 @@ Computes the Keogh lower bound for the Dynamic Time Warping distance between a p
 }
 
 \usage{
-lbKeoghDistance(x, y, window.size)
+lb.keoghDistance(x, y, window.size)
 }
 
 \arguments{
@@ -80,7 +80,7 @@ help(example.series)
 #Calculate the LB_Keogh distance measure for these two series
 #with a window of band of width 11:
 
-lbKeoghDistance(example.series1, example.series2, window.size=11)
+lb.keoghDistance(example.series1, example.series2, window.size=11)
 
 
 

@@ -1,14 +1,17 @@
 
 #Wrapper function for all lp distances.
-lpDistance<-function(x, y, method, ...){
+lpDistance <- function(x, y, method="euclidean", ...){
+  
+  method <- match.arg(method, c("euclidean", "minkowski", "infnorm", "manhattan"))
+  
   if (method == "euclidean"){
     d <- euclideanDistance(x, y)
   }
   if (method == "minkowski"){
     d <- minkowskiDistance(x, y, ...)
   }
-  if (method == "infinitenorm"){
-    d <- infiniteNormDistance(x, y)
+  if (method == "infnorm"){
+    d <- inf.normDistance(x, y)
   }
   if (method == "manhattan"){
     d <- manhattanDistance(x, y)
@@ -16,51 +19,6 @@ lpDistance<-function(x, y, method, ...){
   
   return(d)
 }
-
-#Euclidean distance
-euclideanDistance <- function(x, y){
-  if (class(try(lpInitialCheck(x, y)))=="try-error"){
-    return(NA)
-  }else{
-  #The Euclidean distance between two series is computed.
-  d <- sqrt(sum((x - y) ^ 2))
-  return(d)
-  }
-}
-
-#Manhattan distance
-manhattanDistance <- function(x, y){
-  if (class(try(lpInitialCheck(x, y)))=="try-error"){
-    return(NA)
-  }else{
-  #The Manhattan distance between two series is computed.
-  d <- sum(abs(x - y))
-  return(d)
-  }
-}
-
-#Infinite norm distance
-infiniteNormDistance <- function(x, y){
-  if (class(try(lpInitialCheck(x, y)))=="try-error"){
-    return(NA)
-  }else{
-  #The supremum norm between two series is computed.
-  d <- max(abs(x - y))
-  return(d)
-  }
-}
-
-#Minkowski distance
-minkowskiDistance <- function(x, y, p){
-  if (class(try(lpInitialCheck(x, y, p)))=="try-error"){
-    return(NA)
-  }else{
-  #The minkowsky distance with the chosen p value is computed.
-  d <- (sum(abs(x - y) ^ p)) ^ (1 / p)
-  return(d)
-  }
-}
-
 
 #This function checks for initial errors.
 lpInitialCheck <- function(x, y, p){

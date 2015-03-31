@@ -1,21 +1,21 @@
 
 #This function calculates the short time series (sts) distance measure.
-stsDistance <- function(x, y, tx, ty){
+stsDistance <- function(x, y, tx=NULL, ty=NULL){
   
   if (class(try(stsInitialCheck(x, y, tx, ty)))=="try-error"){
     return(NA)
   }else{
 
   #If no index is specified then evenly samples series are assumed.
-  if (missing(tx) & missing(ty)){
-   tx<-c(1:length(x))
-   ty<-tx
+  if (is.null(tx) & is.null(ty)){
+   tx <- c(1:length(x))
+   ty <- tx
   }
-  if (missing(tx)){
-    tx<-ty
+  if (is.null(tx)){
+    tx <- ty
   }
-  if (missing(ty)){
-    ty<-tx
+  if (is.null(ty)){
+    ty <- tx
   }
 
   #The STS distance is calculated.

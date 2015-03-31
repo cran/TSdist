@@ -1,5 +1,5 @@
 
-erpDistance<-function(x, y, g, sigma){
+erpDistance <- function(x, y, g, sigma){
   
   if (class(try(erpInitialCheck(x, y, g, sigma)))=="try-error"){
     return(NA)

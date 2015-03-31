@@ -17,21 +17,40 @@ Date: \tab 2014-05-10\cr
 License: \tab GPL (>=2) \cr
 }
 This package provides a comprehensive set of distance measures published in the literature
-and specifically aimed at time series data. The distance measures implemented are: 
+and specifically aimed at time series data. Some of the measures are specifically implemented for this package while other are originally hosted in other R packages. The distance measures included are: 
 
 \itemize{
-\item   Lp distances. 
-\item   Distances based on Pearson's correlation.
-\item   Distance based on the cross-correlation.
-\item Short Time Series distance (STS).
-\item Dynamic Time Warping (DTW).
-\item Edit Distance for Real Sequences (EDR).
-\item Longest Common Subsequence distance for real sequences(LCSS).
-\item Edit Distance based on Real Penalty (ERP).
-\item Fourier Coefficient based distance.
-\item TQuest distance.
-\item Dissim distance.
-\item Approximation of the Dissim distance.
+\item   Lp distances \code{\link{lpDistance}}
+\item   Distance based on the cross-correlation \code{\link{ccorDistance}}
+\item Short Time Series distance (STS) \code{\link{stsDistance}}
+\item Dynamic Time Warping (DTW) \code{\link{dtwDistance}}
+\item LB_Keogh lower bound for the Dynamic Time Warping distance \code{\link{lb.keoghDistance}}
+\item Edit Distance for Real Sequences (EDR) \code{\link{edrDistance}}
+\item Longest Common Subsequence distance for real sequences(LCSS)  \code{\link{lcssDistance}}
+\item Edit Distance based on Real Penalty (ERP) \code{\link{erpDistance}}
+\item Distance based on the Fourier Discrete Transform \code{\link{fourierDistance}}
+\item TQuest distance \code{\link{tquestDistance}}
+\item Dissim distance \code{\link{dissimDistance}}
+\item Approximation of the Dissim distance \code{\link{dissimapproxDistance}}
+\item Autocorrelation-based dissimilarity \code{\link{acfDistance}}. 
+\item  Partial autocorrelation-based dissimilarity \code{\link{pacfDistance}}.
+\item Dissimilarity based on LPC cepstral coefficients \code{\link{ar.lpc.cepsDistance}}. 
+\item Model-based dissimilarity proposed by Maharaj (1996, 2000) \code{\link{ar.mahDistance}}.
+\item Compression-based dissimilarity measure \code{\link{cdmDistance}}. 
+\item Complexity-invariant distance measure \code{\link{cidDistance}}. 
+\item Dissimilarities based on Pearson's correlation \code{\link{corDistance}}. 
+\item Dissimilarity index which combines temporal correlation and raw value
+behaviors \code{\link{cortDistance}}. 
+\item Dissimilarity based on wavelet feature extraction \code{\link{wavDistance}}. 
+\item Integrated periodogram based dissimilarity \code{\link{int.perDistance}}. 
+\item Periodogram based dissimilarity \code{\link{perDistance}}. 
+\item Symbolic Aggregate Aproximation based dissimilarity  \code{\link{mindist.saxDistance}}. 
+\item Normalized compression based distance \code{\link{ncdDistance}}. 
+\item Dissimilarity measure cased on nonparametric forecasts \code{\link{predDistance}}. 
+\item Dissimilarity based on the integrated squared difference between the log-spectra \code{\link{spec.isdDistance}}. 
+\item General spectral dissimilarity measure using local-linear estimation of the log-spectra \code{\link{spec.llrDistance}}. 
+\item Permutation Distribution Distance \code{\link{pdcDistance}}. 
+\item Frechet distance \code{\link{frechetDistance}}. 
 }
 
 All the distance measures are implemented in separate functions but can also be invoked by means of the wrapper function \code{\link{tsDistances}}. Moreover, this distance enables the use of time series objects of type \code{ts}, \code{zoo} and \code{xts}.

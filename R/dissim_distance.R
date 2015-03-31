@@ -1,26 +1,27 @@
 
-dissimDistance <- function(x, y, tx, ty){
+dissimDistance <- function(x, y, tx=NULL, ty=NULL){
+  
+  #If both temporal indices are missing, equal sampling is assumed and both
+  #series begin and end in the same timestamp.
+  if (is.null(tx) && is.null(ty)){
+    tx <- seq(0, 1, length.out=length(x))
+    ty <- seq(0, 1, length.out=length(y))
+  }
+  
+  #If the temporal index of one of the series is missing, an equal starting and 
+  #ending point is assumed and the series is sampled constantly in that interval.
+  if (is.null(tx)){
+    tx <- seq(ty[1], ty[length(ty)], length.out=length(x))
+  }
+  if (is.null(ty)){
+    ty <- seq(tx[1], tx[length(tx)], length.out=length(y))
+  }
+  
   
   if (class(try(dissimInitialCheck(x, y, tx, ty)))=="try-error"){
     return(NA)
   }else{
-
-  #If both temporal indices are missing, equal sampling is assumed and both
-  #series begin and end in the same timestamp.
-  if (missing(tx) & missing(ty)){
-    tx <- seq(0, 1, length.out=length(x))
-    ty <- seq(0, 1, length.out=length(y))
-  }
-
-  #If the temporal index of one of the series is missing, an equal starting and 
-  #ending point is assumed and the series is sampled constantly in that interval.
-  if (missing(tx)){
-    tx <- seq(ty[1], ty[length(ty)], length.out=length(x))
-  }
-  if (missing(ty)){
-    ty <- seq(tx[1], tx[length(tx)], length.out=length(y))
-  }
-
+    
   #If the temporal indices are different a global index is calculated 
   #taking into account both indexes.
   if (length(tx) != length(ty)){
@@ -65,7 +66,8 @@ dissimDistance <- function(x, y, tx, ty){
   ind1 <- ind[1:(length(ind) - 1)]
   ind2 <- ind[2:length(ind)]
 
-  case2.1 <- which((b[case2]^2 - 4*a[case2]*c[case2]) == 0)
+  root <- b[case2]^2 - 4*a[case2]*c[case2]
+  case2.1 <- which(round(root, digits=5)== 0)
   case2.1 <- case2[case2.1]
   aa <- a[case2.1]
   bb <- b[case2.1]
@@ -76,7 +78,7 @@ dissimDistance <- function(x, y, tx, ty){
   aux2 <- (2*aa*indd2+bb)/(4*aa)*sqrt(aa*indd2^2+bb*indd2+cc)-(bb^2-4*aa*cc)/(8*aa*sqrt(aa))
   D[case2.1] <- aux2-aux1
 
-  case2.2 <- which((b[case2]^ - 4*a[case2]*c[case2]) < 0)
+  case2.2 <- which(round(root, digits=5) < 0)
   case2.2 <- case2[case2.2]
   aa <- a[case2.2]
   bb <- b[case2.2]
@@ -97,6 +99,7 @@ dissimDistance <- function(x, y, tx, ty){
 
 #This function checks for initial errors.
 dissimInitialCheck <- function(x, y, tx, ty){
+  
   if (!is.numeric(x) | !is.numeric(y)){
     stop('The series must be numeric', call.=FALSE)
   }
@@ -108,19 +111,16 @@ dissimInitialCheck <- function(x, y, tx, ty){
   }
   if (any(is.na(x)) | any(is.na(y))){
     stop('There are missing values in the series', call.=FALSE)
-  } 
-  if (!missing(tx) & !missing(ty)){
-    
+  }     
     if (tx[1]!=ty[1] | tx[length(tx)]!=ty[length(ty)]){
       stop('Series must begin and end in the same timestamp', call.=FALSE)
     }
-    if (any(tx<=0) | any(ty<=0)){
+    if (any(tx<0) | any(ty<0)){
       stop('The temporal indices must be positive', call.=FALSE)
     }
     if (any(diff(tx)<=0) | any(diff(ty)<=0)){
       stop('The temporal indices must be strictly increasing', call.=FALSE)
     }
-  }
 }
 
 #This function creates a global index by fusing two indices.

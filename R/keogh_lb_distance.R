@@ -1,4 +1,4 @@
-lbKeoghDistance<-function(x, y, window.size){
+lb.keoghDistance <- function(x, y, window.size){
   
   if (class(try(lbKeoghInitialCheck(x, y, window.size)))=="try-error"){
     return(NA)
@@ -41,7 +41,7 @@ lbKeoghInitialCheck <- function(x, y, window.size){
   }
   if (window.size%%2!=1){
     stop('For the Sakoe-Chiba band, the window must be symmetric 
-         (window.size must be even', call.=FALSE)
+         and window.size must be even', call.=FALSE)
   } 
   if (window.size > length(x)){
     stop('The width of the window should not exceed the length 

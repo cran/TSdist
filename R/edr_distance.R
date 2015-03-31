@@ -1,7 +1,7 @@
 
 
 #This function calculates the Edit Distance Based on Real Penalty.
-edrDistance<-function(x, y, epsilon, sigma){
+edrDistance <- function(x, y, epsilon, sigma){
   
   if (class(try(edrInitialCheck(x, y, epsilon, sigma)))=="try-error"){
     return(NA)

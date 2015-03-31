@@ -1,6 +1,6 @@
 
 #This function calculates a distance based on the cross-correlation.
-crossCorrelationDistance <- function(x, y, lag.max=(min(length(x), length(y))-1)){
+ccorDistance <- function(x, y, lag.max=(min(length(x), length(y))-1)){
  
   #Some initial errors are checked
   if(class(try(ccInitialCheck(x, y, lag.max)))=="try-error"){return(NA)}

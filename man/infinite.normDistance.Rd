@@ -1,5 +1,5 @@
-\name{infiniteNormDistance}
-\alias{infiniteNormDistance}
+\name{inf.normDistance}
+\alias{inf.normDistance}
 
 
 \title{
@@ -10,7 +10,7 @@ Computes the infinite norm distance between a pair of numeric vectors.
 }
 
 \usage{
-infiniteNormDistance(x, y)
+inf.normDistance(x, y)
 }
 
 \arguments{
@@ -28,7 +28,8 @@ The infinite norm distance is computed between the two numeric series using the 
 
 \deqn{D=\max{|x_i-y_i|}}
 
-The two series must have the same length. 
+The two series must have the same length. This distance is calculated with the help of the \code{\link[proxy]{dist}} function of the \code{proxy} package.
+
 
 
 }
@@ -37,6 +38,12 @@ The two series must have the same length.
 \item{d}{
    The computed distance between the pair of series.
 }
+}
+
+\references{
+David Meyer and Christian Buchta (2015). proxy: Distance and Similarity Measures. R package
+  version 0.4-14. http://CRAN.R-project.org/package=proxy
+
 }
 
 \author{
@@ -66,5 +73,5 @@ help(example.series)
 
 #Compute the  infinite norm distance between them:
 
-infiniteNormDistance(example.series1, example.series2)
+inf.normDistance(example.series1, example.series2)
 }

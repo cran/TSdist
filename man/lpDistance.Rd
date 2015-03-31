@@ -9,7 +9,7 @@ Computes the distance based on the chosen Lp norm between a pair of numeric vect
 }
 
 \usage{
-lpDistance(x, y, method, ...)
+lpDistance(x, y, method="euclidean", ...)
 }
 
 \arguments{
@@ -22,7 +22,7 @@ lpDistance(x, y, method, ...)
 }
 
 \item{method}{
-  A value in "euclidean", "manhattan", "infinitenorm", "minkowski".
+  A value in "euclidean", "manhattan", "infnorm", "minkowski".
 }
 
   \item{...}{
@@ -61,7 +61,7 @@ Usue Mori, Alexander Mendiburu, Jose A. Lozano.
 \seealso{
 
 These distances are also implemeted in separate functions. For more information see \code{\link{euclideanDistance}}, \code{\link{manhattanDistance}}, \code{\link{minkowskiDistance}}
-and \code{\link{infiniteNormDistance}}
+and \code{\link{inf.normDistance}}
 
 To calculate this distance measure using \code{ts}, \code{zoo} or \code{xts} objects see \code{\link{tsDistances}}. To calculate distance matrices of time series databases using this measure see \code{\link{tsDatabaseDistances}}.
 }
@@ -91,7 +91,7 @@ lpDistance(example.series1, example.series2, method="manhattan")
 
 #Infinite norm distance
 
-lpDistance(example.series1, example.series2, method="infinitenorm")
+lpDistance(example.series1, example.series2, method="infnorm")
 
 #Minkowski distance with p=3.
 

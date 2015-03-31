@@ -5,8 +5,29 @@ importFrom(proxy,pr_DB)
 #Import zoo
 import(zoo)
 
+#Import zoo
+import(cluster)
+
+#Import KernSmooth
+import(KernSmooth)
+
+#Import locpol
+import(locpol)
+
 #Import xts
 import(xts)
+
+#Import distance measures from TSclust
+import(TSclust)
+
+#Import pdc
+import(pdc)
+
+#Import pdc
+import(longitudinalData)
+
+#Import dtw
+import(dtw)
 
 #dtw, edr, erp, lcss core functions
 useDynLib(TSdist)
@@ -14,7 +35,14 @@ useDynLib(TSdist)
 
 #Export distance functions
 
-export(crossCorrelationDistance,dissimDistance,dissimapproxDistance,dtwDistance, edrDistance, erpDistance, lcssDistance, fourierDistance,lbKeoghDistance,lpDistance,euclideanDistance,manhattanDistance,minkowskiDistance,infiniteNormDistance,correlationDistance,stsDistance, tquestDistance)
+export(ccorDistance,dissimDistance,dissimapproxDistance,dtwDistance, 
+edrDistance, erpDistance, lcssDistance, fourierDistance,lb.keoghDistance,
+lpDistance,euclideanDistance,manhattanDistance,minkowskiDistance,
+inf.normDistance,stsDistance, tquestDistance,acfDistance, pacfDistance, 
+ar.lpc.cepsDistance, ar.mahDistance, ar.picDistance, cdmDistance, cidDistance, 
+corDistance, cortDistance, wavDistance, int.perDistance, perDistance, 
+mindist.saxDistance, ncdDistance, predDistance, spec.glkDistance, spec.isdDistance,
+spec.llrDistance, frechetDistance, pdcDistance)
 
 
 #Export wrapper function for time series objects.
@@ -22,4 +50,10 @@ export(tsDistances)
 
 #Export function to calculate distance matrices
 export(tsDatabaseDistances)
+
+#Export K-medoids function
+export(k.medoids)
+
+#Export 1NN function
+export(oneNN)
 

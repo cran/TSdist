@@ -1,5 +1,5 @@
 
-lcssDistance<-function(x, y, epsilon, sigma){
+lcssDistance <- function(x, y, epsilon, sigma){
   
   if (class(try(lcssInitialCheck(x, y, epsilon, sigma)))=="try-error"){
     return(NA)

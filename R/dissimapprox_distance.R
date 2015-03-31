@@ -1,26 +1,29 @@
 
 
-dissimapproxDistance <- function(x, y, tx, ty){
+dissimapproxDistance <- function(x, y, tx=NULL, ty=NULL){
   
-  if (class(try(dissimInitialCheck(x, y, tx, ty)))=="try-error"){
-    return(NA)
-  }else{
-   
   #If both temporal indices are missing, equal sampling is assumed and both
   #series begin and end in the same timestamp.
-  if (missing(tx) & missing(ty)){
+  if (is.null(tx) & is.null(ty)){
     tx <- seq(0, 1, length.out=length(x))
     ty <- seq(0, 1, length.out=length(y))
   }
   
   #If the temporal index of one of the series is missing, an equal starting and 
   #ending point is assumed and the series is sampled constantly in that interval.
-  if (missing(tx)){
+  if (is.null(tx)){
     tx <- seq(ty[1], ty[length(ty)], length.out=length(x))
   }
-  if (missing(ty)){
+  if (is.null(ty)){
     ty <- seq(tx[1], tx[length(tx)], length.out=length(y))
   }
+  
+  
+  
+  if (class(try(dissimInitialCheck(x, y, tx, ty)))=="try-error"){
+    return(NA)
+  }else{
+   
   
   #If the temporal indices are different a global index is calculated 
   #taking into account both indexes.
