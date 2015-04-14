@@ -16,8 +16,7 @@ Version: \tab 1.0\cr
 Date: \tab 2014-05-10\cr
 License: \tab GPL (>=2) \cr
 }
-This package provides a comprehensive set of distance measures published in the literature
-and specifically aimed at time series data. Some of the measures are specifically implemented for this package while other are originally hosted in other R packages. The distance measures included are: 
+This package provides a comprehensive set of time series distance measures  published in the literature and some additional functions which, although initially not designed for this purpose, can be used to measure the dissimilarity between time series. These measures can be used to perform clustering, classification or other data mining tasks which require the definition of a distance measure between time series. Some of the measures are specifically implemented for this package while other are originally hosted in other R packages. The measures included are: 
 
 \itemize{
 \item   Lp distances \code{\link{lpDistance}}
@@ -53,7 +52,7 @@ behaviors \code{\link{cortDistance}}.
 \item Frechet distance \code{\link{frechetDistance}}. 
 }
 
-All the distance measures are implemented in separate functions but can also be invoked by means of the wrapper function \code{\link{tsDistances}}. Moreover, this distance enables the use of time series objects of type \code{ts}, \code{zoo} and \code{xts}.
+All the measures are implemented in separate functions but can also be invoked by means of the wrapper function \code{\link{tsDistances}}. Moreover, this distance enables the use of time series objects of type \code{ts}, \code{zoo} and \code{xts}.
 
 As an additional functionality of the package, pairwise distances between all the time series in a database can be easily computed by using the \code{\link[proxy]{dist}} function from the \pkg{proxy} package or the \code{\link{tsDatabaseDistances}} function included in the \pkg{TSdist} package.
 }

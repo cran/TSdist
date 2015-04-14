@@ -42,7 +42,7 @@ The series must have the same length. Furthermore, the width of the window shoul
 
 \value{
 \item{d}{
-  The computed distance between the pair of series.
+  The Keogh lower bound of the Dynamic Time Warping distance between the pair of series.
 }
 
 }

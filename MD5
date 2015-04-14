@@ -1,4 +1,4 @@
-c67f8cc737a4abb4a572f0839cc735ee *DESCRIPTION
+756d40eb299c2047f3010f4a34a608c1 *DESCRIPTION
 9e8c26d84b38fcbda4c3f9ded179c83c *NAMESPACE
 6a2db3c1c518016252b696be3dbb6249 *R/1NN.R
 beb85c3fdeb54c6323c3488c2091ec11 *R/K-medoids.R
@@ -33,7 +33,7 @@ a851e5e4b9fba7a2437b2cb555e54f43 *data/example.series3.RData
 44943c40045f251763f472060bc898ed *data/zoo.database.RData
 7b6ffb1c1dc547cfe13bffb8af7b302b *data/zoo.series1.RData
 e2ef8af912bebdbe50ec07fe3cb38439 *data/zoo.series2.RData
-f5dce99e0693b7adcf75cadad86a2999 *man/TSdist-package.Rd
+9c7365bd6e9c7832d001324da20da121 *man/TSdist-package.Rd
 c79639c63311a766615b9607eb77a5e4 *man/acfDistance.Rd
 f4a7bbecb9d0b1fef57a6c6df3687b50 *man/ar.lpc.cepsDistance.Rd
 fc684fb299c12aa77851e81158b7eccb *man/ar.mahDistance.Rd
@@ -58,7 +58,7 @@ e0e744628b188bfb4af74e8a42e2df1a *man/frechetDistance.Rd
 694e3c32b33db72262009d943e2a4336 *man/infinite.normDistance.Rd
 a9c2c9062a1b8f52506fc2a10d4366c9 *man/int.perDistance.Rd
 95d0bf3aea56baf3c90068486f4408c8 *man/k.medoids.Rd
-bcccbea3279e9548d3df731ec8305cac *man/lb.keoghDistance.Rd
+1a09a7c3541119e14ef05e2b37f90d34 *man/lb.keoghDistance.Rd
 6b3c90c4cc89655a75f4374b008494e0 *man/lcssDistance.Rd
 a6a570739686ef08e73bc71caaf98099 *man/lpDistance.Rd
 c17437a4306f6dd76b94799bd971e9a4 *man/manhattanDistance.Rd

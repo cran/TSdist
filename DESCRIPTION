@@ -1,7 +1,7 @@
 Package: TSdist
 Type: Package
 Title: Distance Measures for Time Series Data
-Version: 2.1
+Version: 2.2
 Encoding: UTF-8
 Date: 2015-03-30
 Depends: R (>= 3.0.3), stats, proxy
@@ -9,9 +9,9 @@ Imports: zoo, xts, dtw, TSclust, KernSmooth, locpol, pdc,
         longitudinalData, cluster
 Author: Usue Mori, Alexander Mendiburu, J.A. Lozano 
 Maintainer: Usue Mori <usue.mori@ehu.es>
-Description: A set of commonly used distance measures for time series data. The application of these distance measures is useful to perform clustering, classification or other data mining tasks.
+Description: A set of commonly used distance measures and some additional functions which, although initially not designed for this purpose, can be used to measure the dissimilarity between time series. These measures can be used to perform clustering, classification or other data mining tasks which require the definition of a distance measure between time series.
 License: GPL (>= 2)
-Packaged: 2015-03-31 08:25:26 UTC; usue
+Packaged: 2015-04-14 06:15:34 UTC; usue
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2015-03-31 10:51:05
+Date/Publication: 2015-04-14 09:11:14
