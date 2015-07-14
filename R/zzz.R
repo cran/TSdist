@@ -5,8 +5,8 @@
             utils::packageDescription("TSdist")$Version ) );
       
   ## Register the distance measures into package proxy
-  pr_DB$set_entry(FUN=tsDistances, 
-                  names="tsDistances", 
+  pr_DB$set_entry(FUN=TSDistances, 
+                  names="TSDistances", 
                   loop=TRUE, type="metric", distance=TRUE,
                description="A function that computes different 
                  distance measures for time series.")

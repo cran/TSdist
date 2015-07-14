@@ -2,7 +2,8 @@
 #include<math.h> 
 
 
-//Función que calcula la distancia lcss
+//Function that calculates the cost matrix of distance LCSS with 
+// the chosen window.
 void lcss(int *tamx, int *tamy, int *sigma, double *costMatrix, double *subcost){
 
 	int i,j,tam1,tam2,siggma, max;
@@ -10,12 +11,12 @@ void lcss(int *tamx, int *tamy, int *sigma, double *costMatrix, double *subcost)
 	tam2=*tamy+1;
 	siggma=*sigma+2;
 	
-	//Vamos rellenando la matriz de costes
+	//We fill the cost matrix step by step
 
-	//Rellenamos la posición 0,0
+	//We fill position (0,0)
 	costMatrix[0]=0.0;
 
-	//Rellenamos las esquinas
+	//We fill the edges of the matrix
 	for(i=1;i<siggma;i++){
 	costMatrix[i*(*tamy+1)]=0.0;}
 
@@ -40,5 +41,3 @@ void lcss(int *tamx, int *tamy, int *sigma, double *costMatrix, double *subcost)
 		}
 	}
 }
-
-

@@ -32,28 +32,35 @@ import(dtw)
 #dtw, edr, erp, lcss core functions
 useDynLib(TSdist)
 
+#Other global environments
+importFrom("graphics", "legend", "lines", "plot.default")
+importFrom("methods", "is")
+importFrom("stats", "approx", "as.dist", "ccf", "dnorm", "fft", 
+"integrate", "is.mts", "is.ts", "optim", "spec.pgram", "time")
+
 
 #Export distance functions
 
-export(ccorDistance,dissimDistance,dissimapproxDistance,dtwDistance, 
-edrDistance, erpDistance, lcssDistance, fourierDistance,lb.keoghDistance,
-lpDistance,euclideanDistance,manhattanDistance,minkowskiDistance,
-inf.normDistance,stsDistance, tquestDistance,acfDistance, pacfDistance, 
-ar.lpc.cepsDistance, ar.mahDistance, ar.picDistance, cdmDistance, cidDistance, 
-corDistance, cortDistance, wavDistance, int.perDistance, perDistance, 
-mindist.saxDistance, ncdDistance, predDistance, spec.glkDistance, spec.isdDistance,
-spec.llrDistance, frechetDistance, pdcDistance)
+export(CCorDistance, DissimDistance, DTWDistance, EDRDistance, ERPDistance, 
+       LCSSDistance, FourierDistance,LBKeoghDistance, LPDistance,
+       EuclideanDistance, ManhattanDistance, MinkowskiDistance, InfNormDistance,
+       STSDistance, TquestDistance, ACFDistance, PACFDistance, 
+       ARLPCCepsDistance, ARMahDistance, ARPicDistance, CDMDistance, 
+       CIDDistance, CorDistance, CortDistance, WavDistance, IntPerDistance, 
+       PerDistance, MindistSaxDistance, NCDDistance, PredDistance, 
+       SpecGLKDistance, SpecISDDistance, SpecLLRDistance, FrechetDistance, 
+       PDCDistance)
 
 
 #Export wrapper function for time series objects.
-export(tsDistances)
+export(TSDistances)
 
 #Export function to calculate distance matrices
-export(tsDatabaseDistances)
+export(TSDatabaseDistances)
 
 #Export K-medoids function
-export(k.medoids)
+export(KMedoids)
 
 #Export 1NN function
-export(oneNN)
+export(OneNN)
 
