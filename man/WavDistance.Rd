@@ -31,6 +31,8 @@ WavDistance(x, y, ...)
 
 \details{
 This is essentially a wrapper for the \code{\link[TSclust]{diss.DWT}} function of package \pkg{TSclust}. However, in this case, instead of introducing a matrix conformed of a set of time series, two numerical series of the same length are introduced.
+
+\bold{Note:} This distance measure is based on the Euclidean distance. This means that it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel because it will provide positive definite Gram matrices. . 
 }
 
 \value{

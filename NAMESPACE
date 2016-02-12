@@ -23,7 +23,7 @@ import(TSclust)
 #Import pdc
 import(pdc)
 
-#Import pdc
+#Import longitudinalData
 import(longitudinalData)
 
 #Import dtw

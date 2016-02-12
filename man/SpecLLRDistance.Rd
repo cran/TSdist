@@ -32,6 +32,7 @@ SpecLLRDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[TSclust]{diss.SPEC.LLR}} function of package \pkg{TSclust}. As such, all the functionalities of the \code{\link[TSclust]{diss.SPEC.LLR}} function are also available when using this function. 
 
+\bold{Note:} This distance measure is not a metric (Montero and Vilar, 2014), but the negative definiteness is not explicitly confirmed or discarded in the literature, to the extent of our knowledge. As such, before using it directly within kernel machines (for example, by inserting it in the Gaussian RBF kernel), we recommend analyzing the positive definiteness of the Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. More information and some solutions to this problem can be found in (Pree, 2014).
 }
 
 \value{

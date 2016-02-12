@@ -32,7 +32,7 @@ The Minkowski distance is computed between the two numeric series using the foll
 
 The two series must have the same length and \code{p} must be a positive integer value. This distance is calculated with the help of the \code{\link[proxy]{dist}} function of the \code{proxy} package.
 
-
+\bold{Note:} This distance measure is a metric. This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 }
 

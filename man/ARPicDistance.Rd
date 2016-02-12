@@ -30,6 +30,9 @@ ARPicDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[TSclust]{diss.AR.PIC}} function of package \pkg{TSclust}. As such, all the functionalities of the \code{\link[TSclust]{diss.AR.PIC}} function are also available when using this function. 
 
+\bold{Note:} This distance measure is a metric (Montero and Vilar, 2014). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
+
+
 }
 
 \value{

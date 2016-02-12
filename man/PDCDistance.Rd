@@ -30,6 +30,8 @@ PDCDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[pdc]{pdcDist}} function of package \pkg{pdc}. As such, all the functionalities of the \code{\link[pdc]{pdcDist}} function are also available when using this function. 
 
+\bold{Note:} This distance measure is a metric (Brandmaier, 2015). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
+
 }
 
 \value{
@@ -42,8 +44,8 @@ This is simply a wrapper for the \code{\link[pdc]{pdcDist}} function of package 
 
 \references{
 
-Andreas M. Brandmaier (in press). pdc: An R package for Complexity-Based Clustering
-of Time Series. Journal of Statistical Software.
+Andreas M. Brandmaier (2015). pdc: An R package for Complexity-Based Clustering
+of Time Series. Journal of Statistical Software, Vol 67, Issue 5.
   
 Pablo Montero, José A. Vilar (2014). TSclust: An R Package for Time Series
   Clustering. Journal of Statistical Software, 62(1), 1-43. URL

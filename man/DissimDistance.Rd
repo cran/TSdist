@@ -30,6 +30,7 @@ The Dissim distance is obtained by calculating the integral of the Euclidean dis
 
 The two series must start and end in the same interval but they may have different and non-constant sampling rates. These sampling rates must be positive and strictly increasing. For more information see reference below.
 
+\bold{Note:} This distance measure is a metric (Esling and Agon, 2012). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 }
 
@@ -42,6 +43,8 @@ The two series must start and end in the same interval but they may have differe
 
 \references{
 Frentzos, E., Gratsias, K., & Theodoridis, Y. (2007). \emph{Index-based Most Similar Trajectory Search}. In Proceeding of the IEEE 23rd International Conference on Data Engineering (pp. 816-825).
+
+Esling, P., & Agon, C. (2012). Time-series data mining. ACM Computing Surveys (CSUR), 45(1), 1–34. 
 }
 
 \author{

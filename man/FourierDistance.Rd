@@ -30,6 +30,7 @@ FourierDistance(x, y, n = (floor(length(x) / 2) + 1))
 \details{
 The Euclidean distance between the first \code{n} Fourier coefficients of series \code{x} and \code{y} is computed. The series must have the same length. Furthermore, \code{n} should not be larger than the length of the series.
 
+\bold{Note:} This distance measure is based on the Euclidean distance. This means that it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel, because it will provide positive definite Gram matrices. . 
 
 }
 

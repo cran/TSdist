@@ -37,6 +37,7 @@ Based on this, the Keogh_LB distance is calculated as the Euclidean distance bet
 
 The series must have the same length. Furthermore, the width of the window should be even in order to assure a symmetric band around the diagonal and should not exceed the length of the series.
 
+\bold{Note:} This distance measure is a metric (Esling and Agon., 2012). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 }
 
@@ -51,6 +52,8 @@ The series must have the same length. Furthermore, the width of the window shoul
 Keogh, E., & Ratanamahatana, C. A. (2004). Exact indexing of dynamic time warping. Knowledge and Information Systems, 7(3), 358-386.
 
 Sakoe, H., & Chiba, S. (1978). \emph{Dynamic programming algorithm optimization for spoken word recognition}. {IEEE} Transactions on Acoustics, Speech, and Signal Processing, 26(1), 43-49.
+
+Esling, P., & Agon, C. (2012). Time-series data mining. ACM Computing Surveys (CSUR), 45(1), 1–34. 
 }
 
 \author{

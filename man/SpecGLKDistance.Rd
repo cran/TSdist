@@ -31,7 +31,7 @@ SpecGLKDistance(x, y, ...)
 
 This function simply intends to be a wrapper for the \code{\link[TSclust]{diss.SPEC.GLK}} function of package \pkg{TSclust}. However, in the 1.2.3 version of the \pkg{TSclust} package we have found an error in the call to this function. As such, in this version, the more general \code{\link[TSclust]{diss}} function, designed for distance matrix calculations of time series databases, is used to calculate the spec.glk distance between two series. Once this bug is fixed in the original package, we will update our call procedure.
 
-
+\bold{Note:} The negative definiteness of this distance measure is not explicitly mentioned in the literature, to the best of our knowledge, and so is not assured. As such, when using it within kernel based classifiers such as Support Vector Machines or Gaussian Processes (i.e. by inserting this distance in the Gaussian RBF kernel) the user should make sure that the obtained Gram matrix is positive semi-definite. More information and references to some solutions to this problem can be found in (Pree et al. 2014).
 }
 
 \value{

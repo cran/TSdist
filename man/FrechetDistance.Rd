@@ -35,6 +35,9 @@ FrechetDistance(x, y, tx, ty, ...)
 
 \details{
 This is essentially a wrapper for the \code{\link[longitudinalData]{distFrechet}} function of package \pkg{longitudinalData}. As such, all the functionalities of the \code{\link[longitudinalData]{distFrechet}} function are also available when using this function. 
+
+\bold{Note:} This distance measure is a metric (Eiter and Mannila, 1994). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
+
 }
 
 \value{
@@ -51,6 +54,8 @@ Christophe Genolini (2014). longitudinalData: Longitudinal Data. R package versi
 Pablo Montero, José A. Vilar (2014). TSclust: An R Package for Time Series
   Clustering. Journal of Statistical Software, 62(1), 1-43. URL
   http://www.jstatsoft.org/v62/i01/.
+  
+Eiter, T., & Mannila, H. (1994). Computing Discrete Frechet Distance. Technical Report. Retrieved from http://www.kr.tuwien.ac.at/staff/eiter/et-archive/cdtr9464.pdf
 }
 
 \author{

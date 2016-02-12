@@ -37,6 +37,7 @@ where \eqn{N} is the length of series \eqn{x} and \eqn{y} and the summatory goes
 
 \deqn{tx[k+1]-tx[k]=ty[k+1]-ty[k], \, \, \, for \, \, \, k=0 ,..., N-1}
 
+\bold{Note:} This distance measure is a metric (\enc{Möller}{Moller}-Levet et al., 2003). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 }
 
@@ -49,6 +50,7 @@ where \eqn{N} is the length of series \eqn{x} and \eqn{y} and the summatory goes
 
 \references{
 \enc{Möller}{Moller}-Levet, C. S., Klawonn, F., Cho, K., & Wolkenhauer, O. (2003). \emph{Fuzzy Clustering of Short Time-Series and Unevenly Distributed Sampling Points}. In Proceedings of the 5th International Symposium on Intelligent Data Analysis.
+
 }
 
 \author{

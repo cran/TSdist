@@ -45,6 +45,8 @@ The size of the window must be a positive integer value, not larger than the siz
 
 \deqn{|length(x)-length(y)| < sigma}
 
+\bold{Note:} This distance measure is not a metric (Chen and Ng, 2004), and, is not negative definite (Lei and Sun, 2007). This means that it can not be used directly within kernel machines  in all cases (for example, by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Cuturi, 2011; Gaidon et al. 2011; Marteau and Gibet, 2014; Lei and Sun, 2007; Pree, 2014)
+
 
 }
 
@@ -56,6 +58,18 @@ The size of the window must be a positive integer value, not larger than the siz
 
 \references{
 Chen, L., Ozsu, M. T., & Oria, V. (2005). \emph{Robust and Fast Similarity Search for Moving Object Trajectories}. In Proceedings of the 2005 ACM SIGMOD International Conference on Management of Data (pp. 491-502).
+
+Chen, L., & Ng, R. (2004). On The Marriage of Lp-norms and Edit Distance. In Proceedings of the Thirtieth International Conference on Very Large Data Bases (pp. 792–803).
+
+Cuturi, M. (2011). Fast Global Alignment Kernels. In Proceedings of the 28th International Conference on Machine Learning (pp. 929–936). 
+
+Gaidon, A., Harchaoui, Z., & Schmid, C. (2011). A time series kernel for action recognition. In BMVC 2011 - British Machine Vision Conference (pp. 63.1–63.11).
+
+Marteau, P.-F., & Gibet, S. (2014). On Recursive Edit Distance Kernels With Applications To Time Series Classification. IEEE Transactions on Neural Networks and Learning Systems, PP(6), 1–13.
+
+Lei, H., & Sun, B. (2007). A Study on the Dynamic Time Warping in Kernel Machines. In 2007 Third International IEEE Conference on Signal-Image Technologies and Internet-Based System (pp. 839–845). 
+
+Pree, H., Herwig, B., Gruber, T., Sick, B., David, K., & Lukowicz, P. (2014). On general purpose time series similarity measures and their use as kernel functions in support vector machines. Information Sciences, 281, 478–495.
 }
 
 \author{
