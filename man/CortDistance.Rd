@@ -33,7 +33,7 @@ CortDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[TSclust]{diss.CORT}} function of package \pkg{TSclust}. As such, all the functionalities of the \code{\link[TSclust]{diss.CORT}} function are also available when using this function. 
 
-\bold{Note:} This distance measure is not a metric (Chouakria and Nagabhushan, 2007), but the negative definiteness is not explicitly mentioned in the literature, to the extent of our knowledge. As such, before using it directly within kernel machines (e.g. by inserting it in the Gaussian RBF kernel), we recommend analyzing the positive definiteness of the Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. More information and some solutions to this problem can be found in (Pree, 2014).
+%\bold{Note:} This distance measure is not a metric (Chouakria and Nagabhushan, 2007), but the negative definiteness is not explicitly mentioned in the literature, to the extent of our knowledge. As such, before using it directly within kernel machines (e.g. by inserting it in the Gaussian RBF kernel), we recommend analyzing the positive definiteness of the Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. More information and some solutions to this problem can be found in (Pree, 2014).
 }
 
 \value{

@@ -31,7 +31,7 @@ DTWDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[dtw]{dtw}} function of package \pkg{dtw}. As such, all the functionalities of the \code{\link[dtw]{dtw}} function are also available when using this function. 
 
-\bold{Note:} This distance measure cannot be used directly within kernel machines in all cases (for example, by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix (Lei and Sun, 2007), which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Cuturi, 2011; Gaidon et al. 2011; Marteau and Gibet, 2014; Lei and Sun, 2007; Pree, 2014)
+%\bold{Note:} This distance measure cannot be used directly within kernel machines in all cases (for example, by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix (Lei and Sun, 2007), which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Cuturi, 2011; Gaidon et al. 2011; Marteau and Gibet, 2014; Lei and Sun, 2007; Pree, 2014)
 }
 
 \value{

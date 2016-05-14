@@ -37,7 +37,7 @@ Based on this, the Keogh_LB distance is calculated as the Euclidean distance bet
 
 The series must have the same length. Furthermore, the width of the window should be even in order to assure a symmetric band around the diagonal and should not exceed the length of the series.
 
-\bold{Note:} This distance measure is a metric (Esling and Agon., 2012). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
+%\bold{Note:} This distance measure is a metric (Esling and Agon., 2012). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 }
 

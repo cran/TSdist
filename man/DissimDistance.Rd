@@ -30,7 +30,7 @@ The Dissim distance is obtained by calculating the integral of the Euclidean dis
 
 The two series must start and end in the same interval but they may have different and non-constant sampling rates. These sampling rates must be positive and strictly increasing. For more information see reference below.
 
-\bold{Note:} This distance measure is a metric (Esling and Agon, 2012). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
+%\bold{Note:} This distance measure is a metric (Esling and Agon, 2012). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 }
 

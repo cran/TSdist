@@ -30,7 +30,7 @@ IntPerDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[TSclust]{diss.INT.PER}} function of package \pkg{TSclust}. As such, all the functionalities of the \code{\link[TSclust]{diss.INT.PER}} function are also available when using this function. 
 
-\bold{Note:} This distance measure is based on the Euclidean distance. This means that it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel, because it will provide positive definite Gram matrices. . 
+%\bold{Note:} This distance measure is based on the Euclidean distance. This means that it can be used directly within kernel machines, e.g. by inserting it in the Gaussian RBF kernel, because it will provide positive definite Gram matrices. . 
 }
 
 \value{

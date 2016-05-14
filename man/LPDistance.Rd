@@ -44,7 +44,7 @@ Minkowski distance: \eqn{\sqrt[p]{(x_i-y_i)^p)}}
 
 The two series must have the same length. Furthermore, in the case of the Minkowski distance, \code{p} must be specified as a positive integer value.
 
-\bold{Note:} These distance measures are all metrics. This means that they can be used directly within kernel machines, for example by inserting them in the Gaussian RBF kernel (Lei and Sun, 2007), because they will provide positive definite Gram matrices. 
+%\bold{Note:} These distance measures are all metrics. This means that they can be used directly within kernel machines, for example by inserting them in the Gaussian RBF kernel (Lei and Sun, 2007), because they will provide positive definite Gram matrices. 
 
 
 }

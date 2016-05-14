@@ -45,7 +45,7 @@ The size of the window must be a positive integer value, not larger than the siz
 \deqn{|length(x)-length(y)| < sigma}
 
 
-\bold{Note:} This distance measure is a metric (Chen and Ng, 2004). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
+%\bold{Note:} This distance measure is a metric (Chen and Ng, 2004). This means that it will provide positive definite Gram matrices and, thus, it can be used directly within kernel machines, for example by inserting it in the Gaussian RBF kernel (Lei and Sun, 2007).
 
 
 }

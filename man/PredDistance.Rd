@@ -36,7 +36,7 @@ PredDistance(x, y, h, ...)
 \details{
 This is simply a wrapper for the \code{\link[TSclust]{diss.PRED}} function of package \pkg{TSclust}. As such, all the functionalities of the \code{\link[TSclust]{diss.PRED}} function are also available when using this function. 
 
-\bold{Note:} The negative definiteness of this distance measure is not explicitly mentioned in the literature, to the best of our knowledge, and so is not assured. As such, when using it within kernel based classifiers such as Support Vector Machines or Gaussian Processes (e.g. by inserting this distance in the Gaussian RBF kernel) the user should make sure that the obtained Gram matrix is positive semi-definite. More information and references to some solutions to this problem can be found in (Pree et al. 2014).
+%\bold{Note:} The negative definiteness of this distance measure is not explicitly mentioned in the literature, to the best of our knowledge, and so is not assured. As such, when using it within kernel based classifiers such as Support Vector Machines or Gaussian Processes (e.g. by inserting this distance in the Gaussian RBF kernel) the user should make sure that the obtained Gram matrix is positive semi-definite. More information and references to some solutions to this problem can be found in (Pree et al. 2014).
 }
 
 \value{

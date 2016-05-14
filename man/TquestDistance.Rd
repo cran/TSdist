@@ -37,7 +37,7 @@ The TQuest distance represents the series based on a set of intervals that fulfi
 
 The final distance between two series is defined in terms of the similarity between their threshold passing interval sets. For more information, see references.
 
-\bold{Note:} This distance can not be used directly within kernel machines  in all cases (for example, by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Pree, 2014)
+%\bold{Note:} This distance can not be used directly within kernel machines  in all cases (for example, by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Pree, 2014)
 }
 
 \value{

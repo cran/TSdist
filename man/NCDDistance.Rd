@@ -30,7 +30,7 @@ NCDDistance(x, y, ...)
 \details{
 This is simply a wrapper for the \code{\link[TSclust]{diss.NCD}} function of package \pkg{TSclust}. As such, all the functionalities of the \code{\link[TSclust]{diss.NCD}} function are also available when using this function. 
 
-\bold{Note:} This distance measure is not a metric in all cases (Montero and Vilar, 2014), but the negative definiteness is not explicitly mentioned in the literature, to the extent of our knowledge. As such, before using it directly within kernel machines (for example, by inserting it in the Gaussian RBF kernel), we recommend analyzing the positive definiteness of the Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. More information and some solutions to this problem can be found in (Pree, 2014).
+%\bold{Note:} This distance measure is not a metric in all cases (Montero and Vilar, 2014), but the negative definiteness is not explicitly mentioned in the literature, to the extent of our knowledge. As such, before using it directly within kernel machines (for example, by inserting it in the Gaussian RBF kernel), we recommend analyzing the positive definiteness of the Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. More information and some solutions to this problem can be found in (Pree, 2014).
 }
 
 \value{

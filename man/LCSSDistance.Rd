@@ -54,7 +54,7 @@ The size of the window must be a positive integer value, not larger than the siz
 
 \deqn{|length(x)-length(y)| < sigma}
 
-\bold{Note:} This distance measure is not a metric (Chen and Ng, 2004), and is not negative definite (Lei and Sun, 2007). This means that it can not be used directly within kernel machines  in all cases (e.g. by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Cuturi, 2011; Gaidon et al. 2011; Marteau and Gibet, 2014; Lei and Sun, 2007; Pree, 2014)
+%\bold{Note:} This distance measure is not a metric (Chen and Ng, 2004), and is not negative definite (Lei and Sun, 2007). This means that it can not be used directly within kernel machines  in all cases (e.g. by inserting it in the Gaussian RBF kernel), because it may provide a non positive semi-definite Gram matrix, which is a requirement for kernel based classifiers such as Support Vector Machines or Gaussian Processes. As such, the positive definiteness of the obtained Gram matrix should be analyzed in advance. More information and some solutions to this problem can be found in (Cuturi, 2011; Gaidon et al. 2011; Marteau and Gibet, 2014; Lei and Sun, 2007; Pree, 2014)
 }
 
 \value{

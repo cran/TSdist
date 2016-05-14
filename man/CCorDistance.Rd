@@ -41,7 +41,7 @@ is calculated as follows:
  
  The summatory in the denominator goes from 1 to \code{lag.max}. In view of this, the parameter must be a positive integer no larger than the length of the series.
 
-\bold{Note:} The negative definiteness of this distance measure is not explicitly mentioned in the literature, to the best of our knowledge, and so can not be assured. As such, when using it within kernel based classifiers such as Support Vector Machines or Gaussian Processes (i.e by inserting this distance in the Gaussian RBF kernel) the user should make sure that the obtained Gram matrix is positive semi-definite. More information and references to some solutions to this problem can be found in (Pree et al. 2014).
+%\bold{Note:} The negative definiteness of this distance measure is not explicitly mentioned in the literature, to the best of our knowledge, and so can not be assured. As such, when using it within kernel based classifiers such as Support Vector Machines or Gaussian Processes (i.e by inserting this distance in the Gaussian RBF kernel) the user should make sure that the obtained Gram matrix is positive semi-definite. More information and references to some solutions to this problem can be found in (Pree et al. 2014).
 }
 
 \value{
