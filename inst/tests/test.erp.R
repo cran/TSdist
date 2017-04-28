@@ -72,13 +72,6 @@ test_that("Exceptions in erp distance", {
   sigma <- -1
   expect_equal(ERPDistance(x, y, g, sigma), NA)
   
-  sigma <- 10
-  expect_equal(ERPDistance(x, y, g, sigma), NA)
-  
-  x <- c(1, 2, 3, 4, 5, 6)
-  sigma <- 5
-  expect_equal(ERPDistance(x, y, g, sigma), NA)
-  
   x <- c(1, 2)
   sigma <- 1
   expect_equal(ERPDistance(x, y, g, sigma), NA)

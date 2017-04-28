@@ -40,7 +40,7 @@ Furthermore, if desired, a temporal constraint may be added to the ERP
 distance. In this package, only the most basic windowing function, introduced 
 by H.Sakoe and S.Chiba (1978), is implemented. This function sets a band around the main diagonal of the distance matrix and avoids the matching of the points that are farther in time than a specified \eqn{\sigma}. 
 
-The size of the window must be a positive integer value, not larger than the size of both of the series. Furthermore, the following condition must be fulfilled:
+The size of the window must be a positive integer value. Furthermore, the following condition must be fulfilled:
 
 \deqn{|length(x)-length(y)| < sigma}
 

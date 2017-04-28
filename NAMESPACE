@@ -30,7 +30,7 @@ import(longitudinalData)
 import(dtw)
 
 #dtw, edr, erp, lcss core functions
-useDynLib(TSdist)
+useDynLib(TSdist, .registration = TRUE)
 
 #Other global environments
 importFrom("graphics", "legend", "lines", "plot.default")

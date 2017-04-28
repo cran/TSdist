@@ -75,13 +75,6 @@ test_that("Exceptions in EDR distance", {
   sigma <- -1
   expect_equal(EDRDistance(x, y, epsilon, sigma), NA)
   
-  sigma <- 10
-  expect_equal(EDRDistance(x, y, epsilon, sigma), NA)
-  
-  x <- c(1, 2, 3, 4, 5, 6)
-  sigma <- 5
-  expect_equal(EDRDistance(x, y, epsilon, sigma), NA)
-  
   x <- c(1, 2)
   sigma <- 1
   expect_equal(EDRDistance(x, y, epsilon, sigma), NA)

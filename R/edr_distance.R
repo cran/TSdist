@@ -69,14 +69,6 @@ EDRInitialCheck <- function(x, y, epsilon, sigma) {
     if ((sigma) <= 0) {
       stop('The window size must be positive', call.=FALSE)
     }
-    if ((sigma + 1) > length(x)) {
-      stop('The window size exceeds the the length of the first series',
-           call.=FALSE)
-    }
-    if ((sigma + 1) > length(y)) {
-      stop('The window size exceeds the the length of the second series',
-           call.=FALSE)
-    }
     if (sigma < abs(length(x) - length(y))) {
       stop('The window size can not be lower than the difference between the 
            series lengths', call.=FALSE)

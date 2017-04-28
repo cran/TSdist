@@ -73,7 +73,6 @@ testclass <- example.database2[[2]][-trainindex]
 # Apply the 1NN classifier for different distance measures
 
 OneNN(train, trainclass, test, testclass, "euclidean")
-OneNN(train, trainclass, test, testclass, "cid")
 OneNN(train, trainclass, test, testclass, "pdc")
 
 
