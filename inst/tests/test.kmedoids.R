@@ -1,4 +1,4 @@
-test_that("The that KMedoids function works properly", {
+test_that("Test that KMedoids function works properly", {
   
   # We create a database with two series, each one replicated 5 times: 
 

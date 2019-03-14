@@ -1,4 +1,4 @@
-test_that("The that KMedoids function works properly", {
+test_that("Test that the 1NN function works properly", {
   
   # We create a training database with two series: 
 
@@ -30,7 +30,7 @@ test_that("The that KMedoids function works properly", {
   expect_equal(classification, testclasses)
 
 
-  # If there are ties, the classes are selected randomly. The last series is just is at the same distance of x and y.
+  # If there are ties, the classes are selected randomly. The last series is at the same distance of x and y.
   test <- rbind(x, x, x, x, x, y, y, y, y, y, (x + y) /2)
 
   set.seed(123)

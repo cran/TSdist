@@ -1,6 +1,6 @@
-86bdd848a64cc539da102b0e5f06d84b *DESCRIPTION
+a8becec7432956dc8411dfb9bcb182fa *DESCRIPTION
 e1a7e5dd6e94a673a2f834cd43ec64b0 *NAMESPACE
-3783128cc3b90b232e55f249591bdbc7 *R/1NN.R
+5df1a118f717aa147f9dfb7cfc8c2a59 *R/1NN.R
 683a9ce76998c1ab67de9dbb79a28b80 *R/K-medoids.R
 1f2989a035f7826061984319389472c7 *R/TSclust_internals.R
 e27b6691269852efe55bbe31561cae88 *R/TSclust_wrappers.R
@@ -44,11 +44,11 @@ e1d6ee1ed2234958916568c7de6080e4 *inst/tests/test.dtw.R
 2808b33b9cfd3cc774d6c04023d03ada *inst/tests/test.erp.R
 83bda34711a9923496e077f45e77e9ff *inst/tests/test.fourier.R
 34d6f01b50fcf68ad7778a291eec3f9f *inst/tests/test.frechet.R
-9ab7613e63a807cc1ee819265d166822 *inst/tests/test.kmedoids.R
+aadfb5ecbc93fdb5eee205f35bb10724 *inst/tests/test.kmedoids.R
 eebae38b794a3a0108dfb9a5992acc13 *inst/tests/test.lbkeogh.R
 97f2696d52b65634c45f7c1da0a84c37 *inst/tests/test.lcss.R
 b16817a853faea4b07455e12a8b77898 *inst/tests/test.lp.R
-f16b5f5cd446d12fc2665aa0c55ec942 *inst/tests/test.oneNN.R
+6a2f614d6a27ab5fe3e6ecfdb76fb181 *inst/tests/test.oneNN.R
 27052781e2e74622a1c8e4ed499c434a *inst/tests/test.pdc.R
 66e0112f51c56dee48793a7d67ab6f34 *inst/tests/test.sts.R
 6e034da4a2e0469094b6ebc945293ed7 *inst/tests/test.tquest.R

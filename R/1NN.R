@@ -11,7 +11,7 @@ OneNN <- function(train, trainc, test, testc, distance, ...){
   }
   
   # We select nearest neighbors
-  nn <- apply(d, 2, function(x) {which(x == min(x))})
+  nn <- apply(d, 2, function(x) {which((x - min(x)) < 10^-14)})
   
   # We select randomly if there are ties
   if (is(nn)[1]=="matrix") {
