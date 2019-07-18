@@ -49,7 +49,7 @@ export(CCorDistance, DissimDistance, DTWDistance, EDRDistance, ERPDistance,
        CIDDistance, CorDistance, CortDistance, WavDistance, IntPerDistance, 
        PerDistance, MindistSaxDistance, NCDDistance, PredDistance, 
        SpecGLKDistance, SpecISDDistance, SpecLLRDistance, FrechetDistance, 
-       PDCDistance)
+       PDCDistance, TAMDistance)
 
 
 #Export wrapper function for time series objects.

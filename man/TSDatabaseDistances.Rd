@@ -21,7 +21,7 @@ TSDatabaseDistances(X, Y=NULL, distance, ...)
   
   \item{distance}{
  Distance measure to be used. It must be one of: \code{"euclidean"}, \code{"manhattan"}, \code{"minkowski"}, \code{"infnorm"}, \code{"ccor"}, \code{"sts"}, \code{"dtw"}, \code{"keogh.lb"}, \code{"edr"}, \code{"erp"}, \code{"lcss"}, \code{"fourier"}, \code{"tquest"}, \code{"dissim"}, \code{"acf"}, \code{"pacf"}, \code{"ar.lpc.ceps"}, \code{"ar.mah"}, \code{"ar.mah.statistic"}, \code{"ar.mah.pvalue"}, \code{"ar.pic"}, \code{"cdm"}, \code{"cid"}, \code{"cor"}, \code{"cort"}, \code{"wav"}, \code{"int.per"}, \code{"per"}, \code{"mindist.sax"}, \code{"ncd"}, \code{"pred"}, \code{"spec.glk"}, \code{"spec.isd"},
-                        \code{"spec.llr"}, \code{"pdc"}, \code{"frechet"})
+                        \code{"spec.llr"}, \code{"pdc"}, \code{"frechet"}, \code{"tam"})
 }
 \item{...}{
   Additional parameters required by the chosen distance measure.
@@ -67,6 +67,7 @@ behaviors \code{\link{CortDistance}}. Uses the \pkg{TSclust} package (see \code{
 \item "spec.llr": General spectral dissimilarity measure using local-linear estimation of the log-spectra \code{\link{SpecLLRDistance}}. Uses the \pkg{TSclust} package (see \code{\link[TSclust]{diss.SPEC.LLR}}).
 \item "pdc": Permutation Distribution Distance \code{\link{PDCDistance}}. Uses the \pkg{pdc} package (see \code{\link[pdc]{pdcDist}}).
 \item "frechet": Frechet distance \code{\link{FrechetDistance}}. Uses the \pkg{longitudinalData} package (see \code{\link[longitudinalData]{distFrechet}}).
+\item "tam": Time Aligment Measurement \code{\link{TAMDistance}}. 
 }
 
 

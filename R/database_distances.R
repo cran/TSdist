@@ -13,7 +13,7 @@ possible.distances <- c("euclidean", "manhattan", "minkowski", "infnorm",
                         "ar.mah", "ar.mah.statistic", "ar.mah.pvalue", "ar.pic",
                         "cdm", "cid", "cor", "cort", "wav", "int.per", "per", 
                         "mindist.sax", "ncd", "pred", "spec.glk", "spec.isd", 
-                        "spec.llr", "pdc", "frechet")
+                        "spec.llr", "pdc", "frechet", "tam")
   
   
 distance <- match.arg(distance, possible.distances)

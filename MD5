@@ -1,11 +1,11 @@
-a8becec7432956dc8411dfb9bcb182fa *DESCRIPTION
-e1a7e5dd6e94a673a2f834cd43ec64b0 *NAMESPACE
+66372569abd5777026541ff93cfe548d *DESCRIPTION
+a49e51b1c4e0d6b0c3ed4ceae6c21014 *NAMESPACE
 5df1a118f717aa147f9dfb7cfc8c2a59 *R/1NN.R
 683a9ce76998c1ab67de9dbb79a28b80 *R/K-medoids.R
 1f2989a035f7826061984319389472c7 *R/TSclust_internals.R
 e27b6691269852efe55bbe31561cae88 *R/TSclust_wrappers.R
 1d25fb2ebe24db6bb4311d2cd08f5440 *R/cross_correlation_distance.R
-3d5b733eedaf6d9d3cb1977122ae2e60 *R/database_distances.R
+2ba2a80162c1c1fe0861753c65f3af8f *R/database_distances.R
 408da7e80e7ccbde34411d7c94e3d18e *R/dissim_distance.R
 2df69e891503810211f8312ee508edfb *R/dtw_wrapper.R
 7d657e47048e21fbf01b65f54974dcd4 *R/edr_distance.R
@@ -19,8 +19,9 @@ c5b4e349472d87067919da5d2813c5f9 *R/pdc_wrapper.R
 e77f3bfdfcf7881d21fb4b7c54776dfc *R/proxy_wrappers.R
 74caa29a29813a69130343d2d218221d *R/special_pairwise_calculations.R
 956183dddb5da2e10d0bddc120e8cb97 *R/sts_distance.R
+81ede5676cc0746080cdfdc25211d8f4 *R/tam_distance.R
 e120bc8ded38b563f11e23bcfb4428c8 *R/tquest_distance.R
-c6c5a4cdaef8783f6117afcd9ebb67b3 *R/ts_distances.R
+129418ef000c30ce1504ce9e415050e9 *R/ts_distances.R
 af5a681a6e48abb4b02f9740582f4088 *R/zzz.R
 293706b93588b1c961aebeb6d32294fe *data/example.database.RData
 bf84eadb81648f03b1caa70f78c8c41c *data/example.database2.RData
@@ -51,6 +52,7 @@ b16817a853faea4b07455e12a8b77898 *inst/tests/test.lp.R
 6a2f614d6a27ab5fe3e6ecfdb76fb181 *inst/tests/test.oneNN.R
 27052781e2e74622a1c8e4ed499c434a *inst/tests/test.pdc.R
 66e0112f51c56dee48793a7d67ab6f34 *inst/tests/test.sts.R
+5b8eca5764f35c9cca79898d762f22ce *inst/tests/test.tam.R
 6e034da4a2e0469094b6ebc945293ed7 *inst/tests/test.tquest.R
 c6de520bca1a0aafbae46ebdfab45856 *inst/tests/test.tsclust.R
 613337870539886f145e159f15f03520 *man/ACFDistance.Rd
@@ -88,8 +90,9 @@ fb8bb16f34be9f7d0db8d4adb48fa97f *man/PredDistance.Rd
 029d3c68540759f641d02bdfb873978c *man/SpecGLKDistance.Rd
 52331aa57b75d33295f02b9378711b4b *man/SpecISDDistance.Rd
 58795ea20ffce51654338c6e127e39e4 *man/SpecLLRDistance.Rd
-6c5f8fe92d5a889e6e3683024d2c26f1 *man/TSDatabaseDistances.Rd
-699459463f9812d48336adc4a5779dab *man/TSDistances.Rd
+e8764a85273b644d7ceacea2ec7787c1 *man/TAMDistance.Rd
+5e1fee2c6a3c9991edb3faa72dd711e5 *man/TSDatabaseDistances.Rd
+8d0b904369e0c91d830ead2789b3fa1a *man/TSDistances.Rd
 5fb0f77c494bc4928d6f1e30c62429a3 *man/TSdist-package.Rd
 a853ece6c60aae9d94cb5db18c4fa2e0 *man/TquestDistance.Rd
 5f9eac7e096a3ae785c280a444fe993d *man/WavDistance.Rd
@@ -97,7 +100,7 @@ a853ece6c60aae9d94cb5db18c4fa2e0 *man/TquestDistance.Rd
 10bfce12bdbb0dcbf33456d44c260633 *man/example.database2.Rd
 3d4fffab1758afa6303bee24c801bbff *man/example.database3.Rd
 9deac21b92c68b02c817ab4e16d57b5a *man/example.series.Rd
-552115e1bc98519f45feedba2dc46e2a *src/EDR.c
+d49c7ece7a2e868c968328f446337160 *src/EDR.c
 dd30aaad20a27e260b27a7775b919329 *src/EDRnw.c
 7096d9104939710da08059fe4369ed2c *src/ERP.c
 6d6319f50577cf872874516008622e95 *src/ERPnw.c

@@ -4,7 +4,7 @@
 //Function that calculates the cost matrix of the EDR distance.
 void edr(int *tamx, int *tamy, int *sigma, double *costMatrix, double *subcost){
 
-	int i,j,tam1,tam2,min,max,siggma1, siggma2;
+	int i,j,tam1,tam2,max,siggma1, siggma2;
 	tam1=*tamx+1;
 	tam2=*tamy+1;
 	siggma1=fmin(*sigma+2, tam1);
