@@ -68,7 +68,6 @@ test_that("The TSDatabaseDistance function is checked", {
   expect_equal(as.numeric(TSDatabaseDistances(X, "cid")), 0)
   expect_equal(round(as.numeric(TSDatabaseDistances(X, "cor")), digits=2), 0)
   expect_equal(as.numeric(TSDatabaseDistances(X, "cort")), 0)
-  expect_equal(as.numeric(TSDatabaseDistances(X, "wav")), 0)
   expect_equal(as.numeric(TSDatabaseDistances(X, "int.per")), 0)
   expect_equal(as.numeric(TSDatabaseDistances(X, "per")), 0)
   expect_equal(as.numeric(TSDatabaseDistances(X, "mindist.sax", w=2)), 0)
@@ -174,7 +173,6 @@ test_that("The TSDatabaseDistance function is checked", {
   expect_equal(as.numeric(TSDatabaseDistances(X, Y, "cid")), M)
   expect_equal(round(as.numeric(TSDatabaseDistances(X, Y, "cor")), digits=2), M)
   expect_equal(as.numeric(TSDatabaseDistances(X, Y, "cort")), M)
-  expect_equal(as.numeric(TSDatabaseDistances(X, Y, "wav")), M)
   expect_equal(as.numeric(TSDatabaseDistances(X, Y, "int.per")), M)
   expect_equal(as.numeric(TSDatabaseDistances(X, Y, "per")), M)
   expect_equal(as.numeric(TSDatabaseDistances(X, Y, "mindist.sax", w=2)), M)
@@ -194,7 +192,6 @@ test_that("The TSDatabaseDistance function is checked", {
   # If X is a list a different treatment is necessary for some distances
   X1 <- list(x, x)
   Y1 <- list(x, x)
-  expect_equal(as.numeric(TSDatabaseDistances(X1, Y1, "wav")), M)
   expect_equal(as.numeric(TSDatabaseDistances(X1, Y1, "ar.pic")), M)
   
   # Other exceptions specific to some distance measures

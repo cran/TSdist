@@ -11,7 +11,7 @@ possible.distances <- c("euclidean", "manhattan", "minkowski", "infnorm",
                         "ccor","sts", "dtw", "lb.keogh", "edr", "erp", "lcss", 
                         "fourier", "tquest", "dissim", "acf", "pacf", "ar.lpc.ceps",
                         "ar.mah", "ar.mah.statistic", "ar.mah.pvalue", "ar.pic",
-                        "cdm", "cid", "cor", "cort", "wav", "int.per", "per", 
+                        "cdm", "cid", "cor", "cort", "int.per", "per", 
                         "mindist.sax", "ncd", "pred", "spec.glk", "spec.isd", 
                         "spec.llr", "pdc", "frechet", "tam")
   
@@ -68,10 +68,6 @@ distance <- match.arg(distance, possible.distances)
       d <- as.dist(PairwiseDistances1(X, PairwiseCDMDistance, ...))
     } else if (distance == "ncd") { 
       d <- as.dist(PairwiseDistances1(X, PairwiseNCDDistance, ...))
-    } else if (distance == "wav") {
-      options(show.error.messages=FALSE)
-      d <- diss.DWT(X)
-      
     # For the PDC distance we use the original function from package pdc.
     # Faster than  using dist.
     } else if (distance == "pdc") {
@@ -136,17 +132,7 @@ distance <- match.arg(distance, possible.distances)
       # For the rest of the cases: we use dist.
     } else if (distance == "pdc") {
       d <- PDCDist2(t(X), t(Y))
-    # Both the training and testing databases are used for feature extraction.
-    } else if (distance == "wav") {
-      if (is.list(X) & is.list(Y)) {
-        X <- matrix(unlist(X), ncol = length(X[[1]]), byrow = TRUE)
-        Y <- matrix(unlist(Y), ncol = length(Y[[1]]), byrow = TRUE)  
-    }
-      d <- as.matrix(diss.DWT(rbind(X, Y)))
-    
-      n <- dim(X)[1]
-      m <- dim(Y)[1]
-      d <- d[-c(1:n),-c(1:m)]
+
       # Rest of the cases: we use dist.
   } else {
       #options(show.error.messages=FALSE)

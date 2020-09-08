@@ -41,7 +41,7 @@ if (is.numeric(x) & is.null(ty)) {
   ty <- c(1:length(y))
 }
 
-possible.distances <- c("euclidean", "manhattan", "minkowski", "infnorm", "ccor", "sts", "dtw", "lb.keogh", "edr", "erp", "lcss", "fourier", "tquest", "dissim", "acf", "pacf", "ar.lpc.ceps", "ar.mah", "ar.mah.statistic", "ar.mah.pvalue", "ar.pic", "cdm", "cid", "cor", "cort", "wav", "int.per", "per", "mindist.sax", "ncd", "pred", "spec.glk", "spec.isd", "spec.llr", "pdc", "frechet", "tam")
+possible.distances <- c("euclidean", "manhattan", "minkowski", "infnorm", "ccor", "sts", "dtw", "lb.keogh", "edr", "erp", "lcss", "fourier", "tquest", "dissim", "acf", "pacf", "ar.lpc.ceps", "ar.mah", "ar.mah.statistic", "ar.mah.pvalue", "ar.pic", "cdm", "cid", "cor", "cort", "int.per", "per", "mindist.sax", "ncd", "pred", "spec.glk", "spec.isd", "spec.llr", "pdc", "frechet", "tam")
 
 distance <- match.arg(distance, possible.distances)
 
@@ -72,7 +72,6 @@ d<-switch(distance,
        "cid" = CIDDistance(x, y, ...),
        "cor" = CorDistance(x, y, ...),
        "cort" = CortDistance(x, y, ...),
-       "wav" = WavDistance(x, y, ...),
        "int.per" = IntPerDistance(x, y, ...),
        "per" = PerDistance(x, y, ...),
        "mindist.sax" = MindistSaxDistance(x, y, ...),

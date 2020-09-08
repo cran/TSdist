@@ -5,7 +5,7 @@ importFrom(proxy,pr_DB)
 #Import zoo
 import(zoo)
 
-#Import zoo
+#Import cluster
 import(cluster)
 
 #Import KernSmooth
@@ -46,7 +46,7 @@ export(CCorDistance, DissimDistance, DTWDistance, EDRDistance, ERPDistance,
        EuclideanDistance, ManhattanDistance, MinkowskiDistance, InfNormDistance,
        STSDistance, TquestDistance, ACFDistance, PACFDistance, 
        ARLPCCepsDistance, ARMahDistance, ARPicDistance, CDMDistance, 
-       CIDDistance, CorDistance, CortDistance, WavDistance, IntPerDistance, 
+       CIDDistance, CorDistance, CortDistance, IntPerDistance, 
        PerDistance, MindistSaxDistance, NCDDistance, PredDistance, 
        SpecGLKDistance, SpecISDDistance, SpecLLRDistance, FrechetDistance, 
        PDCDistance, TAMDistance)

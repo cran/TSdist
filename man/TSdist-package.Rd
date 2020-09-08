@@ -40,7 +40,6 @@ This package provides a comprehensive set of time series distance measures  publ
 \item Dissimilarities based on Pearson's correlation \code{\link{CorDistance}}. 
 \item Dissimilarity index which combines temporal correlation and raw value
 behaviors \code{\link{CortDistance}}. 
-\item Dissimilarity based on wavelet feature extraction \code{\link{WavDistance}}. 
 \item Integrated periodogram based dissimilarity \code{\link{IntPerDistance}}. 
 \item Periodogram based dissimilarity \code{\link{PerDistance}}. 
 \item Symbolic Aggregate Aproximation based dissimilarity  \code{\link{MindistSaxDistance}}. 

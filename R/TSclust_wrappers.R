@@ -107,16 +107,6 @@ CortDistance <- function(x, y, ...) {
   error=function(e) {print(e); NA})   
 }
 
-# Dissimilarity for Time Series Based on Wavelet Feature Extraction
-WavDistance <- function(x, y, ...) {
-  # If there is an error, NA is returned and the error message 
-  # is printed. This enables executing in batch mode, without stops.
-  tryCatch ({
-  as.numeric(diss.DWT(rbind(x, y)))},
-  error=function(e) {print(e); NA})   
-}
-
-
 # Integrated Periodogram Based Dissimilarity
 IntPerDistance <- function(x, y, ...) {
   # If there is an error, NA is returned and the error message 

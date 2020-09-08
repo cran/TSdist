@@ -222,33 +222,6 @@ test_that("The Cort distance wrapper works properly", {
 
 })
 
-test_that("The Wavelet distance wrapper works properly", {
-  
-  # We use examples in the documentation of the TSclust package to test that the
-  # wrapper works correctly: 
-
-  x <- cumsum(rnorm(100))
-  y <- cumsum(rnorm(100))
-  z <- sin(seq(0, pi, length.out=100))
-
-  d1 <- as.numeric(diss.DWT(rbind(x, y)))
-  d2 <- as.numeric(diss.DWT(rbind(x, z)))
-  d3 <- as.numeric(diss.DWT(rbind(y, z)))
-
-  expect_equal(WavDistance(x, y), d1)
-  expect_equal(WavDistance(x, z), d2)
-  expect_equal(WavDistance(y, z), d3)
-  
-  # If an error is thrown by the original function, the wrapper will return NA.
-  # For example, if there are missing values in the series:
-  x[1] <- NA
-  expect_equal(WavDistance(x, y), NA)
-  
-  # For specific errors of the original function access the documentation of the
-  # TSclust package.
-
-})
-
 
 test_that("The Int Per distance wrapper works properly", {
   
