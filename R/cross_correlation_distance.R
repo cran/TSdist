@@ -3,7 +3,7 @@
 CCorDistance <- function(x, y, lag.max=(min(length(x), length(y)) - 1)){
  
   # Some initial errors are checked
-  if (class(try(CCInitialCheck(x, y, lag.max))) == "try-error") {
+  if (is(try(CCInitialCheck(x, y, lag.max)))[1] == "try-error") {
     return(NA)
   }
   

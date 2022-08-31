@@ -3,7 +3,7 @@
 # This function calculates the Edit Distance Based on Real Penalty.
 EDRDistance <- function(x, y, epsilon, sigma) {
   
-  if (class(try(EDRInitialCheck(x, y, epsilon, sigma))) == "try-error") {
+  if (is(try(EDRInitialCheck(x, y, epsilon, sigma)))[1] == "try-error") {
     return(NA)
   } else {
   # The length of the series are defined

@@ -16,7 +16,7 @@ DissimDistance <- function(x, y, tx=NULL, ty=NULL) {
   }
   
   
-  if (class(try(DissimInitialCheck(x, y, tx, ty))) == "try-error") {
+  if (is(try(DissimInitialCheck(x, y, tx, ty)))[1] == "try-error") {
     return(NA)
   } else {
     

@@ -29,9 +29,9 @@ STSDistance(x, y, tx, ty)
 \details{
 The short time series distance between two series is designed specially for series with an equal but uneven sampling rate. However, it can also be used for time series with a constant sampling rate. It is calculated as follows:
 
-\deqn{STS= \sqrt \sum (((y_{k+1} - y_{k}) / (tx_{k+1} - tx_{k}) - (x_{k+1} - x_{k}) / (ty_{k+1} - ty_{k}))^2)} 
+\deqn{STS= \sqrt{\sum_{k=\{1,...,N-1\}} (((y_{k+1} - y_{k}) / (tx_{k+1} - tx_{k}) - (x_{k+1} - x_{k}) / (ty_{k+1} - ty_{k}))^2)}}
 
-where \eqn{N} is the length of series \eqn{x} and \eqn{y} and the summatory goes from 1 to one minus the length of the series. 
+where \eqn{N} is the length of series \eqn{x} and \eqn{y}. 
 
 \code{tx} and \code{ty} must be positive and strictly increasing. Furthermore, the sampling rate in both indexes must be equal: 
 

@@ -1,7 +1,7 @@
 
 LCSSDistance <- function(x, y, epsilon, sigma) {
   
-  if (class(try(LCSSInitialCheck(x, y, epsilon, sigma)))=="try-error") {
+  if (is(try(LCSSInitialCheck(x, y, epsilon, sigma)))[1] =="try-error") {
     return(NA)
   } else {
   

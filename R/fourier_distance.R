@@ -4,7 +4,7 @@
 FourierDistance <- function(x, y, n = (floor(length(x) / 2) + 1)) {
 
   err <- try(FInitialCheck(x, y, n))
-  if (class(err) == "try-error") {return(NA)}
+  if (is(err)[1] == "try-error") {return(NA)}
     
   # The discrete fourier transform is calculated for both series.
   fft1 <- fft(x)

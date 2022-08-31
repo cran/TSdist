@@ -14,7 +14,7 @@ STSDistance <- function(x, y, tx=NULL, ty=NULL) {
     ty <- tx
   }
   
-  if (class(try(STSInitialCheck(x, y, tx, ty))) == "try-error") {
+  if (is(try(STSInitialCheck(x, y, tx, ty)))[1] == "try-error") {
     return(NA)
   } else {
 

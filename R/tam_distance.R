@@ -1,6 +1,6 @@
 TAMDistance <- function(x, y){
   
-  if (class(try(TAMInitialCheck(x, y))) == "try-error") {
+  if (is(try(TAMInitialCheck(x, y)))[1] == "try-error") {
     return(NA)
   } else {
     

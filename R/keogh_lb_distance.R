@@ -1,6 +1,6 @@
 LBKeoghDistance <- function(x, y, window.size) {
   
-  if (class(try(lbKeoghInitialCheck(x, y, window.size))) == "try-error") {
+  if (is(try(lbKeoghInitialCheck(x, y, window.size)))[1] == "try-error") {
     return(NA)
   } else {
   

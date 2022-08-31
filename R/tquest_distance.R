@@ -16,7 +16,7 @@ TquestDistance <- function(x, y, tx=NULL, ty=NULL, tau) {
     ty <- seq(tx[1], tx[length(tx)], length.out=length(y))
   }
   
-  if (class(try(tquestInitialCheck(x, y, tx, ty, tau))) == "try-error") {
+  if (is(try(tquestInitialCheck(x, y, tx, ty, tau)))[1] == "try-error") {
     return(NA)
   } else {
    

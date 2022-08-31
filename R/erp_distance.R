@@ -1,7 +1,7 @@
 
 ERPDistance <- function(x, y, g, sigma) {
   
-  if (class(try(ERPInitialCheck(x, y, g, sigma))) == "try-error") {
+  if (is(try(ERPInitialCheck(x, y, g, sigma)))[1] == "try-error") {
     return(NA)
   } else {
 
